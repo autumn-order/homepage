@@ -4,14 +4,14 @@
 
 	import Fa from "svelte-fa";
 
-    let recruiter: RecruiterEntry = $$props.recruiter;
+    let { recruiter }: { recruiter: RecruiterEntry } = $props();
 </script>
 
-<div class="flex gap-4 secondary-bg border-color border rounded-sm shadow-md p-4 px-6">
+<div class="card-style flex gap-4 p-6">
     <img
         class="rounded-full w-24 h-24"
         src="https://images.evetech.net/characters/{recruiter.id}/portrait?size=128"
-        alt={`${recruiter.name} avatar`}
+        alt={`${recruiter.name}`}
     />
     <div class="flex flex-col justify-evenly">
         <p class="font-bold">{recruiter.title}</p>

@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { mode } from "mode-watcher";
 	import { onMount } from 'svelte';
 	import type { StatsEntryDto } from '$lib/model';
     import { Chart, registerables } from 'chart.js';
@@ -9,9 +8,6 @@
     let xAxis: string[] = [];
     let yAxis: number[] = [];
     let canvas: HTMLCanvasElement;
-
-    $: graph_line_color = $mode === "light" ? "#92400e" : "#92400e";
-    $: graph_grid_color = $mode === "light" ? "#d4d4d4" : "#171717";
 
     onMount(async () => {
         // const autumnOrderStats = await getCorporationStatsEntries(AUTUMN_ORDER_CORPORATION_ID);
@@ -44,8 +40,6 @@
                 labels: xAxis,
                 datasets: [{
                     label: "Autumn's Total Member Count",
-                    backgroundColor: graph_line_color,
-                    borderColor: graph_line_color,
                     data: yAxis,
                 }]
             },
@@ -59,12 +53,6 @@
 
                     }
                 },
-                y: {
-                    grid: {
-                        color: graph_grid_color,
-
-                    }
-                }
             }
         }}
     )})

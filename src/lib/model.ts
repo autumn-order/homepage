@@ -1,3 +1,5 @@
+import type { Component } from "svelte";
+
 export interface StatsEntryDto {
     members: number;
     date: string;
@@ -24,6 +26,13 @@ export interface StatsRequestDto {
     statsHistoryCorporationIds: number[];
 }
 
+export interface EndgameEntry {
+  imageSrc: string;
+  imageAlt: string;
+  title: string;
+  description: string
+}
+
 export interface CorporationCardEntry {
     corporation_id: number;
     corporation_name: string;
@@ -34,6 +43,12 @@ export interface CorporationCardEntry {
 export interface FaqEntry {
     question: string;
     answer: string;
+}
+
+export interface LearningCurveEntry {
+  icon: Component;
+  title: string;
+  description: string;
 }
 
 export interface RecruiterEntry {

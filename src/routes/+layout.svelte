@@ -2,13 +2,20 @@
 	import '../app.css';
 	let { children } = $props();
 
-	import { ModeWatcher } from "mode-watcher";
-
 	import Header from "$lib/components/Header.svelte";
 	import Footer from "$lib/components/Footer.svelte";
 </script>
 
-<Header/>
-<ModeWatcher/>
-{@render children()}
-<Footer/>
+<svelte:head>
+	<style>
+		html { scroll-padding-top: 88px; }
+	</style>
+</svelte:head>
+
+<div class="flex flex-col min-h-screen">
+    <Header/>
+    <main class="grow">
+        {@render children()}
+    </main>
+    <Footer/>
+</div>
