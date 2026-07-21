@@ -1,24 +1,16 @@
-<script lang="ts" context="module">
-    export interface Recruiter {
-        id: number;
-        name: string;
-        discord: string;
-        title: string;
-    }
-</script>
-
 <script lang="ts">
 	import { faDiscord } from "@fortawesome/free-brands-svg-icons";
+	import { type RecruiterEntry } from "$lib/model";
 
 	import Fa from "svelte-fa";
 
-    let recruiter: Recruiter = $$props.recruiter;
+    let recruiter: RecruiterEntry = $$props.recruiter;
 </script>
 
 <div class="flex gap-4 secondary-bg border-color border rounded-sm shadow-md p-4 px-6">
-    <img 
+    <img
         class="rounded-full w-24 h-24"
-        src="https://images.evetech.net/characters/{recruiter.id}/portrait?size=128" 
+        src="https://images.evetech.net/characters/{recruiter.id}/portrait?size=128"
         alt={`${recruiter.name} avatar`}
     />
     <div class="flex flex-col justify-evenly">

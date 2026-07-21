@@ -1,38 +1,37 @@
-import type { CorporationCardData } from "$lib/components/home/CorporationCard.svelte";
-import type { FaqData } from "$lib/components/home/Faq.svelte";
-import type { Recruiter } from "$lib/components/home/RecruiterCard.svelte";
+import type { CorporationCardEntry, RecruiterEntry, FaqEntry } from "./model";
 
-export const DISCORD_LINK = "https://discord.gg/WvA8Vb9C7D";
+const AUTUMN_ORDER_CORPORATION_ID = 98785281;
+const AUTUMN_INC_CORPORATION_ID = 98812612;
 
 export const APPLY_LINK = "/apply"
+export const DISCORD_LINK = "https://discord.gg/WvA8Vb9C7D";
+export const FEATURED_VIDEO = "https://www.youtube.com/embed/EUI0WUwcn00"
 
-export const FEATURED_VIDEO = "https://www.youtube.com/embed/AdfFnTt2UT0?si=x3rGt9pHRJHZ9g8i"
-
-export const CORPORATIONS: CorporationCardData[] = [
+export const CORPORATIONS: CorporationCardEntry[] = [
     {
-        corporation_id: 98785281,
+        corporation_id: AUTUMN_ORDER_CORPORATION_ID,
         corporation_name: "The Order of Autumn",
         location: "Nullsec",
         apply_text: "Begin Your Journey in Nullsec"
     },
     {
-        corporation_id: 98784256,
-        corporation_name: "Autumn Highsec Division",
+        corporation_id: AUTUMN_INC_CORPORATION_ID,
+        corporation_name: "Autumn Inc.",
         location: "Highsec",
         apply_text: "Begin Your Journey in Highsec"
     },
 ]
 
-export const RECRUITERS: Recruiter[] = [
+export const RECRUITERS: RecruiterEntry[] = [
     {
         id: 2114794365,
         name: "Hyziri",
         discord: "hyziri",
-        title: "CEO of Autumn"
+        title: "CEO"
     }
 ]
 
-export const FAQ_QUESTIONS: FaqData[] = [
+export const FAQ_QUESTIONS: FaqEntry[] = [
     {
         question: "What is Autumn's Main Focus?",
         answer: "Our primary focus is newer players & helping them grow, outside that we focus on PvP with a mix of industry & PvE on the side."

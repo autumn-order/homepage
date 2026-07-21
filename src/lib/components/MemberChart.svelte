@@ -1,8 +1,9 @@
 <script lang="ts">
     import { mode } from "mode-watcher";
 	import { onMount } from 'svelte';
-	import type { StatsEntryDto } from '$lib/model/stats';
+	import type { StatsEntryDto } from '$lib/model';
     import { Chart, registerables } from 'chart.js';
+
     Chart.register(...registerables);
 
     let xAxis: string[] = [];
@@ -13,9 +14,6 @@
     $: graph_grid_color = $mode === "light" ? "#d4d4d4" : "#171717";
 
     onMount(async () => {
-        const AUTUMN_ORDER_CORPORATION_ID = 98785281;
-        const AUTUMN_HIGHSEC_CORPORATION_ID = 98784256;
-
         // const autumnOrderStats = await getCorporationStatsEntries(AUTUMN_ORDER_CORPORATION_ID);
         // const autumnHighsecStats = await getCorporationStatsEntries(AUTUMN_HIGHSEC_CORPORATION_ID);
 
@@ -40,7 +38,7 @@
                 const date = new Date(entry.date);
                 return date.toISOString().slice(0, 10)});
 
-        new Chart(canvas, { 
+        new Chart(canvas, {
             type: 'line',
             data: {
                 labels: xAxis,
@@ -56,15 +54,15 @@
             scales: {
                 x: {
                     ticks: { maxTicksLimit: 7 },
-                    grid: { 
+                    grid: {
                         display: false,
-                    
+
                     }
                 },
                 y: {
-                    grid: { 
-                        color: graph_grid_color,    
-                    
+                    grid: {
+                        color: graph_grid_color,
+
                     }
                 }
             }

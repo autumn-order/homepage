@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ThemeSwitch from "$lib/components/ui/ThemeSwitch.svelte";
 	import Fa from "svelte-fa";
-	import { APPLY_LINK, DISCORD_LINK } from "../../constants";
+	import { APPLY_LINK, DISCORD_LINK } from "$lib/constant";
 	import { Button } from "./ui/button";
 	import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 	import { onMount } from "svelte";
@@ -40,8 +40,6 @@
     });
 
     let dropdownOpen = false;
-    let userDropdown: HTMLLIElement | HTMLDivElement;
-    let userDropdownOpen = false;
 
     export let variant: 'default' | 'full' = 'default';
 

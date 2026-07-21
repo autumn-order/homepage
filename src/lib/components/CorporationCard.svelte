@@ -1,21 +1,13 @@
-<script lang="ts" context="module">
-    export interface CorporationCardData {
-        corporation_id: number;
-        corporation_name: string;
-        location: string;
-        apply_text: string;
-    }
-</script>
-
 <script lang="ts">
     import { faUsers, faSkullCrossbones } from "@fortawesome/free-solid-svg-icons";
+    import { APPLY_LINK } from "$lib/constant";
+    import { type CorporationCardEntry } from "$lib/model";
     import Fa from "svelte-fa";
 
     import Button from "./ui/button/button.svelte";
 	import { formatNumber } from "$lib/utils";
-	import { APPLY_LINK } from "../../constants";
 
-    const corporation: CorporationCardData = $$props.corporation;
+    const corporation: CorporationCardEntry = $$props.corporation;
 
     let members = 0;
     let ships_destroyed = 0;

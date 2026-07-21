@@ -23,3 +23,22 @@ export interface StatsRequestDto {
     statsCorporationIds: number[];
     statsHistoryCorporationIds: number[];
 }
+
+export interface CorporationCardEntry {
+    corporation_id: number;
+    corporation_name: string;
+    location: string;
+    apply_text: string;
+}
+
+export interface FaqEntry {
+    question: string;
+    answer: string;
+}
+
+export interface RecruiterEntry {
+    id: number;
+    name: string;
+    discord: string;
+    title: string;
+}

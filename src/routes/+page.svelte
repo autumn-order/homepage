@@ -3,7 +3,7 @@
     import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 	import { faChevronDown, faHandshake, faGraduationCap, faBook, faTree, faChartLine, faAtom } from "@fortawesome/free-solid-svg-icons";
 
-    import { CORPORATIONS, DISCORD_LINK, APPLY_LINK, RECRUITERS, FEATURED_VIDEO, FAQ_QUESTIONS } from "../constants";
+    import { CORPORATIONS, DISCORD_LINK, APPLY_LINK, RECRUITERS, FEATURED_VIDEO, FAQ_QUESTIONS } from "$lib/constant";
     import Button from "$lib/components/ui/button/button.svelte";
 	import CorporationCard from "$lib/components/CorporationCard.svelte";
 	import RecruiterCard from "$lib/components/RecruiterCard.svelte";
@@ -219,7 +219,7 @@
             </ul>
         </div>
     </section>
-    <section class="flex flex-col items-center"> 
+    <section class="flex flex-col items-center">
         <div class="container flex flex-col items-center py-6 border-color border-x border-t min-h-[700px] pb-24">
             <div class="pb-6">
                 <h1 class="text-gradient font-bold text-xl sm:text-2xl lg:text-3xl text-center">Frequently Asked Questions</h1>

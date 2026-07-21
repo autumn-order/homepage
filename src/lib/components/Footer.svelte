@@ -1,11 +1,11 @@
 <script lang="ts">
     import Fa from "svelte-fa";
+    import { APPLY_LINK, DISCORD_LINK } from "$lib/constant";
     import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 
     import ThemeSwitch from "$lib/components/ui/ThemeSwitch.svelte"
     import Button from "$lib/components/ui/button/button.svelte";
-    
-    import { APPLY_LINK, DISCORD_LINK } from "../../constants";
+
 </script>
 
 <footer class="primary-bg border-color flex justify-center w-screen h-48 border-t">
