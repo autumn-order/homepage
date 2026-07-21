@@ -1,13 +1,13 @@
 <script lang="ts">
-	import ThemeSwitch from "$lib/components/ui/ThemeSwitch.svelte";
 	import Fa from "svelte-fa";
 	import { APPLY_LINK, DISCORD_LINK } from "$lib/constant";
-	import { Button } from "./ui/button";
 	import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 	import { onMount } from "svelte";
 	import { afterNavigate } from "$app/navigation";
 	import { faBars} from "@fortawesome/free-solid-svg-icons";
 
+	let dropdownOpen = false;
+	export let variant: 'default' | 'full' = 'default';
 
 	function toggleDropdown() {
 		dropdownOpen = !dropdownOpen;
@@ -38,15 +38,10 @@
         dropdownOpen = false;
 		document.body.classList.remove('overflow-hidden');
     });
-
-    let dropdownOpen = false;
-
-    export let variant: 'default' | 'full' = 'default';
-
 </script>
 
-<header class="primary-bg border-color fixed w-screen border-b flex flex-col items-center z-20">
-    <div class="{variant === 'full' ? '' : 'max-w-[1440px]'} px-6 py-3 flex justify-between items-center w-full">
+<header class="bg-base-100 border border-base-300 fixed w-screen border-b flex flex-col items-center z-20">
+    <div class="{variant === 'full' ? '' : 'max-w-360'} px-6 py-3 flex justify-between items-center w-full">
         <ul>
             <li>
                 <a href="/" class="flex items-center gap-2">
@@ -62,34 +57,31 @@
         </ul>
         <ul class="hidden lg:flex items-center gap-2">
             <li>
-                <ThemeSwitch/>
-            </li>
-            <li>
                 <a href={DISCORD_LINK} target="_blank">
-                    <Button class="flex gap-2" variant="outline" size="icon" aria-label="Discord">
+                    <button class="btn btn-ghost btn-square" aria-label="Discord">
                         <Fa icon={faDiscord} size="lg"/>
-                    </Button>
+                    </button>
                 </a>
             </li>
             <li>
                 <a href={APPLY_LINK}>
-                    <Button variant="outline" class="flex gap-2">
+                    <button class="btn btn-outline flex gap-2">
                         Log In
-                    </Button>
+                    </button>
                 </a>
             </li>
             <li>
                 <a href={APPLY_LINK}>
-                    <Button class="flex gap-2">
+                    <button class="btn btn-primary">
                         Begin Your Journey
-                    </Button>
+                    </button>
                 </a>
             </li>
         </ul>
         <div class="flex lg:hidden">
-            <Button variant="outline" size="icon" on:click={() => toggleDropdown()} aria-label="header dropdown">
+            <button class="btn btn-ghost btn-square" on:click={() => toggleDropdown()} aria-label="header dropdown">
                 <Fa icon={faBars} size="lg"/>
-            </Button>
+            </button>
         </div>
     </div>
     {#if dropdownOpen}
@@ -108,13 +100,10 @@
             </ul>
             <ul class="flex justify-center gap-2">
                 <li>
-                    <ThemeSwitch/>
-                </li>
-                <li>
                     <a href={DISCORD_LINK} target="_blank">
-                        <Button class="flex gap-2" variant="outline" size="icon" aria-label="Discord">
+                        <button class="btn btn-ghost btn-square" aria-label="Discord">
                             <Fa icon={faDiscord} size="lg"/>
-                        </Button>
+                        </button>
                     </a>
                 </li>
             </ul>

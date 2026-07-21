@@ -1,21 +1,15 @@
-<script lang="ts" context="module">
-    export interface FaqData {
-        question: string,
-        answer: string,
-    }
-</script>
-
 <script lang="ts">
-  import * as Accordion from "$lib/components/ui/accordion/index.js";
+    import type { FaqEntry } from "$lib/model";
 
-    let questions: FaqData[] = $$props.questions;
+    let { questions }: { questions: FaqEntry[] } = $props();
 </script>
 
-<Accordion.Root>
-    {#each questions as { question, answer }}
-        <Accordion.Item value={question}>
-            <Accordion.Trigger>{question}</Accordion.Trigger>
-            <Accordion.Content>{answer}</Accordion.Content>
-        </Accordion.Item>
+<div class="join join-vertical w-full">
+    {#each questions as { question, answer }, i}
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="faq-accordion" checked={i === 0} />
+            <div class="collapse-title font-semibold">{question}</div>
+            <div class="collapse-content text-sm">{answer}</div>
+        </div>
     {/each}
-</Accordion.Root>
+</div>

@@ -3,12 +3,10 @@
     import { APPLY_LINK, DISCORD_LINK } from "$lib/constant";
     import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 
-    import ThemeSwitch from "$lib/components/ui/ThemeSwitch.svelte"
-    import Button from "$lib/components/ui/button/button.svelte";
 
 </script>
 
-<footer class="primary-bg border-color flex justify-center w-screen h-48 border-t">
+<footer class="bg-base-100 border border-base-300 flex justify-center w-screen h-48 border-t">
     <div class="container flex flex-col justify-between h-full pt-8 pb-10">
         <div>
             <a href="/" class="flex items-center gap-4">
@@ -23,20 +21,17 @@
         </div>
         <ul class="flex gap-2">
             <li>
-                <ThemeSwitch/>
-            </li>
-            <li>
                 <a href={DISCORD_LINK} target="_blank" aria-label="Discord">
-                    <Button class="flex gap-2" variant="outline" size="icon" aria-label="Discord">
+                    <button class="btn btn-square btn-ghost" aria-label="Discord">
                         <Fa icon={faDiscord} size="lg"/>
-                    </Button>
+                    </button>
                 </a>
             </li>
             <li>
                 <a href={APPLY_LINK}>
-                    <Button class="flex gap-2">
+                    <button class="btn btn-primary">
                         Begin Your Journey
-                    </Button>
+                    </button>
                 </a>
             </li>
         </ul>

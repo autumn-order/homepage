@@ -4,7 +4,6 @@
 	import { faChevronDown, faHandshake, faGraduationCap, faBook, faTree, faChartLine, faAtom } from "@fortawesome/free-solid-svg-icons";
 
     import { CORPORATIONS, DISCORD_LINK, APPLY_LINK, RECRUITERS, FEATURED_VIDEO, FAQ_QUESTIONS } from "$lib/constant";
-    import Button from "$lib/components/ui/button/button.svelte";
 	import CorporationCard from "$lib/components/CorporationCard.svelte";
 	import RecruiterCard from "$lib/components/RecruiterCard.svelte";
 	import Faq from "$lib/components/Faq.svelte";
@@ -16,7 +15,7 @@
 	<meta name="description" content="EVE is complicated, Autumn makes it easy. There are many twists and turns in the beginning of an EVE journey, why waste time learning the hard way when you can learn the right way?"/>
 </svelte:head>
 
-<div class="primary-bg">
+<div class="bg-base-100">
     <section class="flex justify-center h-screen pt-[88px] pb-[22px] bg-gradient-to-br from-orange-950 to-amber-800">
         <div class="container w-full h-full flex flex-col items-center">
             <div class="flex flex-col w-full my-auto">
@@ -32,17 +31,17 @@
                     <ul class="flex gap-2">
                         <li>
                             <a href={DISCORD_LINK} target="_blank" aria-label="Discord">
-                                <Button class="flex gap-2 text-black dark:text-white" variant="outline">
+                                <button class="btn">
                                     <Fa icon={faDiscord} size="lg"/>
                                     <p>Autumn Discord</p>
-                                </Button>
+                                </button>
                             </a>
                         </li>
                         <li>
                             <a href={APPLY_LINK}>
-                                <Button class="flex gap-2">
+                                <button class="btn btn-primary">
                                     Begin Your Journey
-                                </Button>
+                                </button>
                             </a>
                         </li>
                     </ul>
@@ -179,17 +178,17 @@
         </div>
         <div class="container border-color flex flex-col border-x pb-12 flex-wrap pt-12">
             <div class="w-full flex justify-evenly flex-wrap">
-                <div class="flex flex-col flex-grow w-full lg:w-1/3">
+                <div class="flex flex-col flex-1 w-full lg:w-1/3">
                     <h3 class="text-gradient w-full text-2xl font-bold text-center">Chat with a Recruiter</h3>
                     <div class="flex flex-col items-center gap-2  pt-4">
                         <h4 class="text-lg font-bold">Reach us Through Either</h4>
                         <ul class="flex flex-col gap-2">
                             <li class="self-center mb-2">
                                 <a href={DISCORD_LINK}>
-                                    <Button class="flex gap-2 text-black dark:text-white" variant="outline">
+                                    <button class="btn btn-outline">
                                         <Fa icon={faDiscord} size="lg"/>
                                         <p>The Autumn Discord</p>
-                                    </Button>
+                                    </button>
                                 </a>
                             </li>
                             <li>The <span class="font-bold">Autumn Public</span> in-game chat channel</li>
