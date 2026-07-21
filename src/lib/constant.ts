@@ -1,4 +1,5 @@
-import type { CorporationCardEntry, RecruiterEntry, FaqEntry, EndgameEntry } from "./model";
+import type { CorporationCardEntry, RecruiterEntry, FaqEntry, EndgameEntry, LearningCurveEntry } from "./model";
+import { TreePine, BookOpen, GraduationCap, Handshake } from "@lucide/svelte";
 
 const AUTUMN_ORDER_CORPORATION_ID = 98785281;
 const AUTUMN_INC_CORPORATION_ID = 98812612;
@@ -6,6 +7,29 @@ const AUTUMN_INC_CORPORATION_ID = 98812612;
 export const APPLY_LINK = "/apply"
 export const DISCORD_LINK = "https://discord.gg/WvA8Vb9C7D";
 export const FEATURED_VIDEO = "https://www.youtube.com/embed/EUI0WUwcn00"
+
+export const LEARNING_CURVE_ITEMS: LearningCurveEntry[] = [
+  {
+    icon: Handshake,
+    title: "Community",
+    description: "Begin with the advantage of connections with a vast & highly experienced community ranging from veteran capital pilots, hardcore industrialists, large scale corporation leaders, and those just beginning their EVE journey."
+  },
+  {
+    icon: GraduationCap,
+    title: "Classes",
+    description: "Participate in a wide range of classes offered by Autumn ranging from industry, exploration, leading fleets, black ops, and more!"
+  },
+  {
+    icon: BookOpen,
+    title: "Information",
+    description: "Access to extensive resources to gain that foundational knowledge in your areas of EVE including a highly active Discord and a knowledgeable community."
+  },
+  {
+    icon: TreePine,
+    title: "Play at Your Pace",
+    description: "Join us in either highsec or nullsec and remember that real life always comes first, this is a game after all. No mandatory fleet participation minimums or inactivity policy, step away to take care of real life when needed and pick up where you left off whenever you're ready."
+  }
+]
 
 export const ENDGAMES: EndgameEntry[] = [
   {

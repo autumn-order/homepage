@@ -1,9 +1,9 @@
 <script lang="ts">
     import Fa from "svelte-fa";
     import { faDiscord } from "@fortawesome/free-brands-svg-icons";
-	import { faChevronDown, faHandshake, faGraduationCap, faBook, faTree, faChartLine, faAtom } from "@fortawesome/free-solid-svg-icons";
+	import { faChevronDown, faChartLine, faAtom } from "@fortawesome/free-solid-svg-icons";
 
-    import { CORPORATIONS, DISCORD_LINK, APPLY_LINK, RECRUITERS, FEATURED_VIDEO, FAQ_QUESTIONS, ENDGAMES } from "$lib/constant";
+    import { CORPORATIONS, DISCORD_LINK, APPLY_LINK, RECRUITERS, FEATURED_VIDEO, FAQ_QUESTIONS, ENDGAMES, LEARNING_CURVE_ITEMS } from "$lib/constant";
 	import CorporationCard from "$lib/components/CorporationCard.svelte";
 	import RecruiterCard from "$lib/components/RecruiterCard.svelte";
 	import Faq from "$lib/components/Faq.svelte";
@@ -107,39 +107,22 @@
 				<h2 class="text-sm sm:text-base xl:text-lg text-center">EVE's learning curve is steep but worth it, have support &amp; community every step of the way towards realizing your dreams in EVE Online.</h2>
 			</div>
 			<div class="flex flex-wrap py-12">
-			<div class="pb-10 w-full lg:pb-0 lg:w-1/2 px-0 sm:px-6">
-				<enhanced:img src="/static/images/landing/the-great-curve.jpg" alt="The steep learning curve of EVE"/>
-			</div>
-			<ul class="w-full lg:w-1/2 flex flex-col justify-between gap-4 px-0 sm:px-6 lg:px-0">
-				<li>
-					<div class="flex gap-2 items-center">
-						<Fa icon={faHandshake} size="lg"/>
-						<h3 class="text-lg font-bold">Community</h3>
-					</div>
-					<p>Begin with the advantage of connections with a vast &amp; highly experienced community ranging from veteran capital pilots, hardcore industrialists, large scale corporation leaders, and those just beginning their EVE journey.</p>
-				</li>
-				<li>
-					<div class="flex gap-2 items-center">
-						<Fa icon={faGraduationCap} size="lg"/>
-						<h3 class="text-lg font-bold">Classes</h3>
-					</div>
-					<p>Participate in a wide range of classes offered by both Autumn and our alliance Black Rose ranging from industry, exploration, leading fleets, growing corporations, and more!</p>
-				</li>
-				<li>
-					<div class="flex gap-2 items-center">
-						<Fa icon={faBook} size="lg"/>
-						<h3 class="text-lg font-bold">Information</h3>
-					</div>
-					<p>Access to extensive resources to gain that foundational knowledge in your areas of EVE including a highly active Discord, an extensive wiki, and a knowledgeable community.</p>
-				</li>
-				<li>
-					<div class="flex gap-2 items-center">
-						<Fa icon={faTree} size="lg"/>
-						<h3 class="text-lg font-bold">Play at Your Pace</h3>
-					</div>
-					<p>Join us in either highsec or nullsec and remember that real life always comes first, this is a game after all. No mandatory fleet participation minimums, step away to take care of real life when needed and pick up where you left off whenever you're ready.</p>
-				</li>
-			</ul>
+    			<div class="pb-10 w-full lg:pb-0 lg:w-1/2 px-0 sm:px-6">
+    				<div class="rounded-box bg-base-300 overflow-hidden">
+    					<img src="/images/landing/the-great-curve.jpg" alt="The steep learning curve of EVE"/>
+    				</div>
+    			</div>
+    			<ul class="w-full lg:w-1/2 flex flex-col justify-between gap-4 px-0 sm:px-6 lg:px-0">
+    				{#each LEARNING_CURVE_ITEMS as { icon: Icon, title, description }}
+    					<li class="grid rounded-box bg-base-300 p-4 gap-2">
+    						<div class="flex gap-2 items-center">
+    							<Icon />
+    							<h3 class="text-lg font-bold">{title}</h3>
+    						</div>
+    						<p>{description}</p>
+    					</li>
+    				{/each}
+    			</ul>
 			</div>
 		</div>
 	</section>
