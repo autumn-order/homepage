@@ -1,12 +1,11 @@
 <script lang="ts">
     import Fa from "svelte-fa";
     import { faDiscord } from "@fortawesome/free-brands-svg-icons";
-	import { faChevronDown, faChartLine, faAtom } from "@fortawesome/free-solid-svg-icons";
+	import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
     import { CORPORATIONS, DISCORD_LINK, APPLY_LINK, RECRUITERS, FEATURED_VIDEO, FAQ_QUESTIONS, ENDGAMES, LEARNING_CURVE_ITEMS } from "$lib/constant";
 	import CorporationCard from "$lib/components/CorporationCard.svelte";
 	import RecruiterCard from "$lib/components/RecruiterCard.svelte";
-	import Faq from "$lib/components/Faq.svelte";
 	import MemberChart from "$lib/components/MemberChart.svelte";
 	import Page from "$lib/components/page.svelte"
 	import Container from "$lib/components/Container.svelte";
@@ -192,13 +191,19 @@
 {/snippet}
 
 {#snippet faqSection()}
-	<section class="flex flex-col items-center py-6 min-h-700px pb-24 bg-base-100">
-		<Container>
-			<div>
-				<h1 class="text-gradient font-bold py-4 text-xl sm:text-2xl lg:text-3xl text-center">Frequently Asked Questions</h1>
-			</div>
-			<div class="w-full md:max-w-70%">
-				<Faq questions={FAQ_QUESTIONS}/>
+	<section class="flex flex-col items-center bg-base-100">
+		<Container class="items-center gap-8 py-12">
+			<h1 class="font-bold py-4 text-xl sm:text-2xl lg:text-3xl text-center">Frequently Asked Questions</h1>
+			<div class="w-full md:max-w-[75%]">
+    			<div class="join join-vertical w-full">
+                    {#each FAQ_QUESTIONS as { question, answer }, i}
+                        <div class="collapse collapse-arrow join-item border-base-300 border">
+                            <input type="radio" name="faq-accordion" checked={i === 0} />
+                            <div class="collapse-title font-semibold">{question}</div>
+                            <div class="collapse-content text-sm">{answer}</div>
+                        </div>
+                    {/each}
+    			</div>
 			</div>
 		</Container>
 	</section>

@@ -7,11 +7,11 @@
     let { recruiter }: { recruiter: RecruiterEntry } = $props();
 </script>
 
-<div class="flex gap-4 bg-base-200 border-base-300 border rounded-sm shadow-md p-4 px-6">
+<div class="flex gap-4 bg-base-200 border-base-300 rounded-box p-6">
     <img
         class="rounded-full w-24 h-24"
         src="https://images.evetech.net/characters/{recruiter.id}/portrait?size=128"
-        alt={`${recruiter.name} avatar`}
+        alt={`${recruiter.name}`}
     />
     <div class="flex flex-col justify-evenly">
         <p class="font-bold">{recruiter.title}</p>

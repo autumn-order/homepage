@@ -63,13 +63,13 @@ export const CORPORATIONS: CorporationCardEntry[] = [
         corporation_id: AUTUMN_ORDER_CORPORATION_ID,
         corporation_name: "The Order of Autumn",
         location: "Nullsec",
-        apply_text: "Begin Your Journey in Nullsec"
+        apply_text: "Begin your nullsec journey"
     },
     {
         corporation_id: AUTUMN_INC_CORPORATION_ID,
         corporation_name: "Autumn Inc.",
         location: "Highsec",
-        apply_text: "Begin Your Journey in Highsec"
+        apply_text: "Begin your highsec journey"
     },
 ]
 
