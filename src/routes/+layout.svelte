@@ -6,6 +6,8 @@
 	import Footer from "$lib/components/Footer.svelte";
 </script>
 
-<Header/>
-{@render children()}
-<Footer/>
+<div class="flex flex-col min-h-screen">
+    <Header/>
+    {@render children()}
+    <Footer/>
+</div>
