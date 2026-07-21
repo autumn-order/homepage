@@ -88,12 +88,12 @@
         <div class="flex lg:hidden flex-col gap-2 w-full h-screen border-t px-6 py-4">
             <ul>
                 <li>
-                    <a class="border-color border-b text-hover flex gap-2 items-center w-full p-2" href={APPLY_LINK}>
+                    <a class="border-base-300 border-b text-base-content hover:text-primary transition-colors flex gap-2 items-center w-full p-2" href={APPLY_LINK}>
                         Begin Your Journey
                     </a>
                 </li>
                 <li>
-                    <a class="border-color border-b text-hover flex gap-2 items-center w-full p-2" href={APPLY_LINK}>
+                    <a class="border-base-300 border-b text-base-content hover:text-primary transition-colors flex gap-2 items-center w-full p-2" href={APPLY_LINK}>
                         Log In
                     </a>
                 </li>

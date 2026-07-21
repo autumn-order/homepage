@@ -25,10 +25,10 @@
 </div>
 
 {#snippet heroSection()}
-	<section class="flex justify-center h-screen pt-[88px] pb-[22px] bg-gradient-to-br from-orange-950 to-amber-800">
+	<section class="flex justify-center h-screen pt-88px pb-22px bg-linear-to-br from-orange-950 to-amber-800">
 		<div class="container w-full h-full flex flex-col items-center">
 			<div class="flex flex-col w-full my-auto">
-				<div class="flex flex-col gap-4 lg:mb-[66px] items-center text-center md:text-left md:items-start md:w-3/4 text-white">
+				<div class="flex flex-col gap-4 lg:mb-66px items-center text-center md:text-left md:items-start md:w-3/4 text-white">
 					<div class="flex flex-col items-center md:items-start gap-2">
 						<div class="flex items-end gap-2">
 							<enhanced:img src="/static/logo512white.png" alt="site logo" class="w-48 h-48 md:w-64 md:h-64"/>
@@ -65,37 +65,37 @@
 {/snippet}
 
 {#snippet endgameSection()}
-	<section class="border-color flex justify-center border-t ">
-		<div class="container border-color h-full flex items-center flex-col border-x gap-12 pb-12">
+	<section class="border-base-300 flex justify-center border-t ">
+		<div class="container border-base-300 h-full flex items-center flex-col border-x gap-12 pb-12">
 			<div class="flex flex-col">
 				<div class="flex justify-center pt-12">
 					<h1 class="text-center text-gradient font-bold text-2xl xl:text-4xl">What Does Your Endgame Look Like?</h1>
 				</div>
-				<ul class="flex justify-evenly flex-wrap 2xl:w-[1440px]">
+				<ul class="flex justify-evenly flex-wrap 2xl:w-1440px">
 					<li class="flex flex-col gap-2 items-center text-center w-full md:w-1/2 2xl:w-1/4 px-2 pb-4">
-						<enhanced:img src="/static/images/landing/monitor.png"  class="w-[300px] h-[200px]" alt="Monitor"/>
+						<enhanced:img src="/static/images/landing/monitor.png"  class="w-300px h-200px" alt="Monitor"/>
 						<h2 class="border-b-2 pb-1 border-neutral-700 w-fit text-lg font-bold">Fleet Commander</h2>
 						<p>Leader of large scale 100+ player fleets fighting over strategic objectives?</p>
 					</li>
 					<li class="flex flex-col gap-2 items-center text-center w-full md:w-1/2 2xl:w-1/4 px-2 pb-4">
-						<enhanced:img src="/static/images/landing/azbel.png" class="w-[300px] h-[200px]" alt="Azbel"/>
+						<enhanced:img src="/static/images/landing/azbel.png" class="w-300px h-200px" alt="Azbel"/>
 						<h2 class="border-b-2 pb-1 border-neutral-700 w-fit text-lg font-bold">Corporation Leader</h2>
 						<p>CEO of your own large scale organization or small tight-knit group?</p>
 					</li>
 					<li class="flex flex-col gap-2 items-center text-center w-full md:w-1/2 2xl:w-1/4 px-2 pb-4">
-						<enhanced:img src="/static/images/landing/rorqual.png" class="w-[300px] h-[200px]" alt="Rorqual"/>
+						<enhanced:img src="/static/images/landing/rorqual.png" class="w-300px h-200px" alt="Rorqual"/>
 						<h2 class="border-b-2 pb-1 border-neutral-700 w-fit text-lg font-bold">Industrialist</h2>
 						<p>An industrialist critical to the economy of entire coalitions?</p>
 					</li>
 					<li class="flex flex-col gap-2 items-center text-center w-full md:w-1/2 2xl:w-1/4 px-2 pb-4">
-						<enhanced:img src="/static/images/landing/avatar.png" class="w-[300px] h-[200px]" alt="Avatar"/>
+						<enhanced:img src="/static/images/landing/avatar.png" class="w-300px h-200px" alt="Avatar"/>
 						<h2 class="border-b-2 pb-1 border-neutral-700 w-fit text-lg font-bold">Supercapital Pilot</h2>
 						<p>Pilot of a legendary titan class super capital wielding a doomsday weapon?</p>
 					</li>
 				</ul>
 			</div>
 			<div class="w-full sm:w-3/4">
-				<div class="relative w-full pt-[56.25%]">
+				<div class="relative w-full pt-56.25%">
 					<iframe class="absolute w-full h-full top-0 left-0" src={FEATURED_VIDEO} title="YouTube video player" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</div>
@@ -106,11 +106,11 @@
 
 {#snippet learningCurveSection()}
 	<section class="flex flex-col items-center">
-		<div class="container border-color flex flex-col border text-center py-4">
+		<div class="container border-base-300 flex flex-col border text-center py-4">
 			<h1 class="text-gradient font-bold text-xl sm:text-2xl lg:text-3xl text-center">Conquer the EVE Learning Curve</h1>
 			<h2 class="text-sm sm:text-base xl:text-lg text-center">EVE's learning curve is steep but worth it, have support &amp; community every step of the way towards realizing your dreams in EVE Online.</h2>
 		</div>
-		<div class="container border-color flex flex-wrap border-x py-12">
+		<div class="container border-base-300 flex flex-wrap border-x py-12">
 			<div class="pb-10 w-full lg:pb-0 lg:w-1/2 px-0 sm:px-6">
 				<enhanced:img src="/static/images/landing/the-great-curve.jpg" alt="The steep learning curve of EVE"/>
 			</div>
@@ -149,8 +149,8 @@
 {/snippet}
 
 {#snippet whatSetsApartSection()}
-	<section class="flex justify-center-center">
-		<div class="container border-color flex flex-col border-x py-12">
+	<section class="flex justify-center items-center">
+		<div class="container border-base-300 flex flex-col border-x py-12">
 			<div class="flex justify-center pb-6">
 				<h1 class="text-gradient font-bold text-xl sm:text-2xl lg:text-3xl">What Sets Autumn Apart?</h1>
 			</div>
@@ -172,15 +172,15 @@
 
 {#snippet beginJourneySection()}
 	<section class="flex flex-col items-center">
-		<div class="container border-color flex flex-col border text-center py-4">
+		<div class="container border-base-300 flex flex-col border text-center py-4">
 			<h1 class="text-gradient font-bold text-xl sm:text-2xl lg:text-3xl text-center">Begin Your Journey as Early as Right Now</h1>
 		</div>
-		<div class="container border-color flex border-x pt-12 flex-wrap">
+		<div class="container border-base-300 flex border-x pt-12 flex-wrap">
 			<div class="w-full xl:w-1/2 pb-6 flex flex-col items-center">
 				<div class="w-full flex justify-center pb-4">
 					<h2 class="text-gradient text-lg sm:text-xl font-bold text-center">Join Many Others in Taking that First Step</h2>
 				</div>
-				<div class="secondary-bg border-color border rounded-sm shadow-md w-full h-[250px] sm:h-[350px] lg:h-[400px] max-w-[695px]">
+				<div class="bg-base-200 border-base-300 border rounded-sm shadow-md w-full h-250px sm:h-350px lg:h-400px max-w-695px">
 					<MemberChart/>
 				</div>
 			</div>
@@ -197,7 +197,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="container border-color flex flex-col border-x pb-12 flex-wrap pt-12">
+		<div class="container border-base-300 flex flex-col border-x pb-12 flex-wrap pt-12">
 			<div class="w-full flex justify-evenly flex-wrap">
 				<div class="flex flex-col flex-1 w-full lg:w-1/3">
 					<h3 class="text-gradient w-full text-2xl font-bold text-center">Chat with a Recruiter</h3>
@@ -220,10 +220,10 @@
 				<div class="">
 					<p class="text-gradient text-2xl font-bold text-center pt-8 lg:pt-0">OR</p>
 				</div>
-				<div class="flex flex-col flex-grow w-full lg:w-1/3">
+				<div class="flex flex-col flex-1 w-full lg:w-1/3">
 					<h3 class="text-gradient w-full text-2xl font-bold text-center pt-8 lg:pt-0">Begin the Application Process</h3>
-					<ol class="list-decimal max-w-[500px] mx-auto pt-4 px-2">
-						<li>Submit your application at <a class="link-color" href={APPLY_LINK}>https://join.autumn-order.com/apply</a></li>
+					<ol class="list-decimal max-w-500px mx-auto pt-4 px-2">
+						<li>Submit your application at <a class="link link-hover" href={APPLY_LINK}>https://join.autumn-order.com/apply</a></li>
 						<li>Wait for a recruiter to review your application, come chat with us in Discord or Autumn Public while you wait!</li>
 						<li>Accept your invitation, most applications are reviewed in less than 24 hours.</li>
 						<li>Follow our Getting Started Guide to get setup and come take part in our community!</li>
@@ -232,7 +232,7 @@
 			</div>
 			<ul class="w-full flex justify-center pt-12">
 				{#each RECRUITERS as recruiter}
-					<li class="w-full md:w-1/2 xl:w-1/4 max-w-[350px]">
+					<li class="w-full md:w-1/2 xl:w-1/4 max-w-350px">
 						<RecruiterCard recruiter={recruiter}/>
 					</li>
 				{/each}
@@ -243,11 +243,11 @@
 
 {#snippet faqSection()}
 	<section class="flex flex-col items-center">
-		<div class="container flex flex-col items-center py-6 border-color border-x border-t min-h-[700px] pb-24">
+		<div class="container flex flex-col items-center py-6 border-base-300 border-x border-t min-h-700px pb-24">
 			<div class="pb-6">
 				<h1 class="text-gradient font-bold text-xl sm:text-2xl lg:text-3xl text-center">Frequently Asked Questions</h1>
 			</div>
-			<div class="w-full md:max-w-[70%]">
+			<div class="w-full md:max-w-70%">
 				<Faq questions={FAQ_QUESTIONS}/>
 			</div>
 		</div>

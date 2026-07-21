@@ -12,7 +12,7 @@
     let ships_destroyed = 0;
 </script>
 
-<div class="secondary-bg border-color h-100 w-[275px] flex flex-col items-center gap-2 border rounded-sm shadow-md p-4 px-6">
+<div class="bg-base-200 border-base-300 h-100 w-68.75 flex flex-col items-center gap-2 border rounded-sm shadow-md p-4 px-6">
     <img src="https://images.evetech.net/corporations/{corporation.corporation_id}/logo?size=128" alt={`${corporation.corporation_name} Logo`}/>
     <h3 class="font-bold">{corporation.corporation_name}</h3>
     <span>{corporation.location}</span>

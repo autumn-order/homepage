@@ -1,5 +1,13 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@utility text-gradient {
+	background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary), var(--color-accent));
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
 @plugin "daisyui/theme" {
     name: "autumn";
     default: true;
