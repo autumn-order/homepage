@@ -2,11 +2,9 @@
     import Fa from "svelte-fa";
     import { APPLY_LINK, DISCORD_LINK } from "$lib/constant";
     import { faDiscord } from "@fortawesome/free-brands-svg-icons";
-
-
 </script>
 
-<footer class="bg-base-100 border border-base-300 flex justify-center w-screen h-48 border-t">
+<footer class="bg-base-200 flex justify-center w-screen h-48">
     <div class="container flex flex-col justify-between h-full pt-8 pb-10">
         <div>
             <a href="/" class="flex items-center gap-4">

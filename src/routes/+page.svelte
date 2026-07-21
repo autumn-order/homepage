@@ -8,6 +8,7 @@
 	import RecruiterCard from "$lib/components/RecruiterCard.svelte";
 	import Faq from "$lib/components/Faq.svelte";
 	import MemberChart from "$lib/components/MemberChart.svelte";
+	import Page from "$lib/components/page.svelte"
 
 	function scrollToEndgame() {
 		document.getElementById('endgame')?.scrollIntoView({ behavior: 'smooth' });
@@ -19,18 +20,18 @@
 	<meta name="description" content="EVE is complicated, Autumn makes it easy. There are many twists and turns in the beginning of an EVE journey, why waste time learning the hard way when you can learn the right way?"/>
 </svelte:head>
 
-<div>
+<Page>
 	{@render heroSection()}
 	{@render endgameSection()}
 	{@render learningCurveSection()}
 	{@render whatSetsApartSection()}
 	{@render beginJourneySection()}
 	{@render faqSection()}
-</div>
+</Page>
 
 {#snippet heroSection()}
-	<section class="flex justify-center h-screen pt-88px pb-22px bg-linear-to-br from-orange-950 to-amber-800">
-		<div class="container w-full h-full flex flex-col items-center">
+	<section class="flex justify-center h-screen pt-88px pb-22px">
+		<div class="container mx-auto w-full h-full flex flex-col items-center">
 			<div class="flex flex-col w-full my-auto">
 				<div class="flex flex-col gap-4 lg:mb-66px items-center text-center md:text-left md:items-start md:w-3/4 text-white">
 					<div class="flex flex-col items-center md:items-start gap-2">
@@ -60,23 +61,23 @@
 					</ul>
 				</div>
 			</div>
-				<div
-					class="flex flex-col justify-self-end text-white mb-4 cursor-pointer"
-					onclick={scrollToEndgame}
-					onkeydown={(e) => e.key === 'Enter' && scrollToEndgame()}
-					role="button"
-					tabindex="0"
-				>
-					<p class="text-2xl font-bold">Learn More</p>
-					<Fa icon={faChevronDown} size="lg"/>
-				</div>
+			<div
+				class="flex flex-col justify-self-end text-white mb-4 cursor-pointer"
+				onclick={scrollToEndgame}
+				onkeydown={(e) => e.key === 'Enter' && scrollToEndgame()}
+				role="button"
+				tabindex="0"
+			>
+				<p class="text-2xl font-bold">Learn More</p>
+				<Fa icon={faChevronDown} size="lg"/>
+			</div>
 		</div>
 	</section>
 {/snippet}
 
 {#snippet endgameSection()}
-	<section id="endgame" class="border-base-300 flex justify-center border-t">
-		<div class="container border-base-300 h-full flex items-center flex-col border-x gap-12 pb-12">
+	<section id="endgame" class="flex justify-center bg-base-100">
+		<div class="container mx-auto h-full flex items-center flex-col gap-12 pb-12">
 			<div class="flex flex-col">
 				<div class="flex justify-center pt-12">
 					<h1 class="text-center text-gradient font-bold py-4 text-2xl xl:text-4xl">What Does Your Endgame Look Like?</h1>
@@ -115,12 +116,13 @@
 {/snippet}
 
 {#snippet learningCurveSection()}
-	<section class="flex flex-col items-center">
-		<div class="container border-base-300 flex flex-col border text-center">
-			<h1 class="text-gradient font-bold py-4 text-xl sm:text-2xl lg:text-3xl text-center">Conquer the EVE Learning Curve</h1>
-			<h2 class="text-sm sm:text-base xl:text-lg text-center">EVE's learning curve is steep but worth it, have support &amp; community every step of the way towards realizing your dreams in EVE Online.</h2>
-		</div>
-		<div class="container border-base-300 flex flex-wrap border-x py-12">
+	<section class="flex flex-col items-center bg-base-100">
+		<div class="container mx-auto flex flex-col items-center">
+			<div class="flex flex-col text-center">
+				<h1 class="text-gradient font-bold py-4 text-xl sm:text-2xl lg:text-3xl text-center">Conquer the EVE Learning Curve</h1>
+				<h2 class="text-sm sm:text-base xl:text-lg text-center">EVE's learning curve is steep but worth it, have support &amp; community every step of the way towards realizing your dreams in EVE Online.</h2>
+			</div>
+			<div class="flex flex-wrap py-12">
 			<div class="pb-10 w-full lg:pb-0 lg:w-1/2 px-0 sm:px-6">
 				<enhanced:img src="/static/images/landing/the-great-curve.jpg" alt="The steep learning curve of EVE"/>
 			</div>
@@ -154,13 +156,14 @@
 					<p>Join us in either highsec or nullsec and remember that real life always comes first, this is a game after all. No mandatory fleet participation minimums, step away to take care of real life when needed and pick up where you left off whenever you're ready.</p>
 				</li>
 			</ul>
+			</div>
 		</div>
 	</section>
 {/snippet}
 
 {#snippet whatSetsApartSection()}
-	<section class="flex justify-center items-center">
-		<div class="container border-base-300 flex flex-col border-x py-12">
+	<section class="flex justify-center items-center bg-base-100">
+		<div class="container mx-auto flex flex-col py-12">
 			<div class="flex justify-center">
 				<h1 class="text-gradient font-bold py-4 text-xl sm:text-2xl lg:text-3xl">What Sets Autumn Apart?</h1>
 			</div>
@@ -181,16 +184,17 @@
 {/snippet}
 
 {#snippet beginJourneySection()}
-	<section class="flex flex-col items-center">
-		<div class="container border-base-300 flex flex-col border text-center">
-			<h1 class="text-gradient font-bold py-4 text-xl sm:text-2xl lg:text-3xl text-center">Begin Your Journey as Early as Right Now</h1>
-		</div>
-		<div class="container border-base-300 flex border-x pt-12 flex-wrap">
+	<section class="flex flex-col items-center bg-base-100">
+		<div class="container mx-auto flex flex-col items-center">
+			<div class="flex flex-col text-center">
+				<h1 class="text-gradient font-bold py-4 text-xl sm:text-2xl lg:text-3xl text-center">Begin Your Journey as Early as Right Now</h1>
+			</div>
+		<div class="flex pt-12 flex-wrap">
 			<div class="w-full xl:w-1/2 pb-6 flex flex-col items-center">
 				<div class="w-full flex justify-center pb-4">
 					<h2 class="text-gradient text-lg sm:text-xl font-bold text-center">Join Many Others in Taking that First Step</h2>
 				</div>
-				<div class="bg-base-200 border-base-300 border rounded-sm shadow-md w-full h-250px sm:h-350px lg:h-400px max-w-695px">
+				<div class="bg-base-200 rounded-sm shadow-md w-full h-250px sm:h-350px lg:h-400px max-w-695px">
 					<MemberChart/>
 				</div>
 			</div>
@@ -207,7 +211,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="container border-base-300 flex flex-col border-x pb-12 flex-wrap pt-12">
+		<div class="flex flex-col pb-12 flex-wrap pt-12">
 			<div class="w-full flex justify-evenly flex-wrap">
 				<div class="flex flex-col flex-1 w-full lg:w-1/3">
 					<h3 class="text-gradient w-full text-2xl font-bold text-center">Chat with a Recruiter</h3>
@@ -247,13 +251,14 @@
 					</li>
 				{/each}
 			</ul>
+			</div>
 		</div>
 	</section>
 {/snippet}
 
 {#snippet faqSection()}
-	<section class="flex flex-col items-center">
-		<div class="container flex flex-col items-center py-6 border-base-300 border-x border-t min-h-700px pb-24">
+	<section class="flex flex-col items-center py-6 min-h-700px pb-24 bg-base-100">
+		<div class="container mx-auto flex flex-col items-center">
 			<div>
 				<h1 class="text-gradient font-bold py-4 text-xl sm:text-2xl lg:text-3xl text-center">Frequently Asked Questions</h1>
 			</div>

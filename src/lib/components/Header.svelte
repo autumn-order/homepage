@@ -40,7 +40,7 @@
     });
 </script>
 
-<header class="bg-base-100 border border-base-300 fixed w-screen border-b flex flex-col items-center z-20">
+<header class="bg-base-200 fixed w-screen flex flex-col items-center z-20">
     <div class="{variant === 'full' ? '' : 'max-w-360'} px-6 py-3 flex justify-between items-center w-full">
         <ul>
             <li>

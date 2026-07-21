@@ -7,13 +7,15 @@
 </script>
 
 <svelte:head>
-		<style>
-			html { scroll-padding-top: 88px; }
-		</style>
-	</svelte:head>
+	<style>
+		html { scroll-padding-top: 88px; }
+	</style>
+</svelte:head>
 
 <div class="flex flex-col min-h-screen">
     <Header/>
-    {@render children()}
+    <main class="grow">
+        {@render children()}
+    </main>
     <Footer/>
 </div>
