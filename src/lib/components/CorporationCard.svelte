@@ -11,7 +11,7 @@
     let members = 0;
 </script>
 
-<div class="bg-base-200 border-base-300 h-100 w-72 flex flex-col items-center gap-2 rounded-box p-6">
+<div class="card-style h-100 w-72 flex flex-col items-center gap-2 p-6">
     <img src="https://images.evetech.net/corporations/{corporation.corporation_id}/logo?size=128" alt={`${corporation.corporation_name} Logo`}/>
     <h3 class="font-bold">{corporation.corporation_name}</h3>
     <span>{corporation.location}</span>

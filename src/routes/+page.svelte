@@ -75,7 +75,7 @@
 			<div class="flex flex-col gap-8 items-center">
 				<ul class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-4 2xl:w-1440px">
 					{#each ENDGAMES as endgame}
-						<li class="flex flex-col gap-2 bg-base-300 rounded-box items-center text-center py-6">
+						<li class="card-style flex flex-col gap-2 items-center text-center p-6">
 							<img src={endgame.imageSrc} class="w-300px h-200px" alt={endgame.imageAlt}/>
 							<h2 class="border-b-2 pb-1 border-neutral-700 w-fit text-lg font-bold">{endgame.title}</h2>
 							<p>{endgame.description}</p>
@@ -111,7 +111,7 @@
     			</div>
     			<ul class="w-full flex flex-col justify-between gap-4">
     				{#each LEARNING_CURVE_ITEMS as { icon: Icon, title, description }}
-    					<li class="grid rounded-box bg-base-300 p-4 gap-2">
+    					<li class="grid card-style p-4 gap-2">
     						<div class="flex gap-2 items-center">
     							<Icon />
     							<h3 class="text-lg font-bold">{title}</h3>

@@ -7,7 +7,7 @@
     let { recruiter }: { recruiter: RecruiterEntry } = $props();
 </script>
 
-<div class="flex gap-4 bg-base-200 border-base-300 rounded-box p-6">
+<div class="card-style flex gap-4 p-6">
     <img
         class="rounded-full w-24 h-24"
         src="https://images.evetech.net/characters/{recruiter.id}/portrait?size=128"

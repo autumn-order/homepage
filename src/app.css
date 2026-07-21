@@ -70,6 +70,10 @@
     --noise: 0;
 }
 
+.card-style {
+    @apply rounded-box border-base-300 border dark:bg-base-200 shadow-md
+}
+
 /* Hero gradient + base-200 layered on html so overscroll
    looks correct in both directions. The gradient covers only
    the top hero zone (non-repeating); base-200 fills the rest. */
