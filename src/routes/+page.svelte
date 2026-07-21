@@ -103,7 +103,7 @@
 				<h1 class="font-bold text-xl sm:text-2xl lg:text-3xl text-center">Conquer the EVE Learning Curve</h1>
 				<h2 class="text-sm sm:text-base xl:text-lg text-center">EVE's learning curve is steep but worth it, have support &amp; community every step of the way towards realizing your dreams in EVE Online.</h2>
 			</div>
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
     			<div class="w-full">
     				<div class="rounded-box bg-base-300 overflow-hidden">
     					<img src="/images/landing/the-great-curve.jpg" alt="The steep learning curve of EVE"/>
