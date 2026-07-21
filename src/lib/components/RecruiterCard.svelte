@@ -4,7 +4,7 @@
 
 	import Fa from "svelte-fa";
 
-    let recruiter: RecruiterEntry = $$props.recruiter;
+    let { recruiter }: { recruiter: RecruiterEntry } = $props();
 </script>
 
 <div class="flex gap-4 secondary-bg border-color border rounded-sm shadow-md p-4 px-6">

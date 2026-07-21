@@ -6,8 +6,8 @@
 	import { afterNavigate } from "$app/navigation";
 	import { faBars} from "@fortawesome/free-solid-svg-icons";
 
-	let dropdownOpen = false;
-	export let variant: 'default' | 'full' = 'default';
+	let dropdownOpen = $state(false);
+	let { variant = 'default' as 'default' | 'full' } = $props();
 
 	function toggleDropdown() {
 		dropdownOpen = !dropdownOpen;
@@ -79,7 +79,7 @@
             </li>
         </ul>
         <div class="flex lg:hidden">
-            <button class="btn btn-ghost btn-square" on:click={() => toggleDropdown()} aria-label="header dropdown">
+            <button class="btn btn-ghost btn-square" onclick={() => toggleDropdown()} aria-label="header dropdown">
                 <Fa icon={faBars} size="lg"/>
             </button>
         </div>

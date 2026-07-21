@@ -6,7 +6,7 @@
     import { type CorporationCardEntry } from "$lib/model";
 	import { formatNumber } from "$lib/utils";
 
-    const corporation: CorporationCardEntry = $$props.corporation;
+    let { corporation }: { corporation: CorporationCardEntry } = $props();
 
     let members = 0;
     let ships_destroyed = 0;
