@@ -1,4 +1,4 @@
-import type { CorporationCardEntry, RecruiterEntry, FaqEntry } from "./model";
+import type { CorporationCardEntry, RecruiterEntry, FaqEntry, EndgameEntry } from "./model";
 
 const AUTUMN_ORDER_CORPORATION_ID = 98785281;
 const AUTUMN_INC_CORPORATION_ID = 98812612;
@@ -6,6 +6,33 @@ const AUTUMN_INC_CORPORATION_ID = 98812612;
 export const APPLY_LINK = "/apply"
 export const DISCORD_LINK = "https://discord.gg/WvA8Vb9C7D";
 export const FEATURED_VIDEO = "https://www.youtube.com/embed/EUI0WUwcn00"
+
+export const ENDGAMES: EndgameEntry[] = [
+  {
+    imageSrc: "/images/landing/monitor.png",
+    imageAlt: "Monitor",
+    title: "Fleet Commander",
+    description: "Leader of large scale 100+ player fleets fighting over strategic objectives?"
+  },
+  {
+    imageSrc: "/images/landing/azbel.png",
+    imageAlt: "Azbel",
+    title: "Corporation Leader",
+    description: "CEO of your own large scale organization or small tight-knit group?"
+  },
+  {
+    imageSrc: "/images/landing/rorqual.png",
+    imageAlt: "Rorqual",
+    title: "Industrialist",
+    description: "An industrialist critical to the economy of entire coalitions?"
+  },
+  {
+    imageSrc: "/images/landing/avatar.png",
+    imageAlt: "Avatar",
+    title: "Supercapital Pilot",
+    description: "Pilot of a legendary titan class super capital wielding a doomsday weapon?"
+  }
+]
 
 export const CORPORATIONS: CorporationCardEntry[] = [
     {

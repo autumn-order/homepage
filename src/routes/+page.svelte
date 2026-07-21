@@ -3,7 +3,7 @@
     import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 	import { faChevronDown, faHandshake, faGraduationCap, faBook, faTree, faChartLine, faAtom } from "@fortawesome/free-solid-svg-icons";
 
-    import { CORPORATIONS, DISCORD_LINK, APPLY_LINK, RECRUITERS, FEATURED_VIDEO, FAQ_QUESTIONS } from "$lib/constant";
+    import { CORPORATIONS, DISCORD_LINK, APPLY_LINK, RECRUITERS, FEATURED_VIDEO, FAQ_QUESTIONS, ENDGAMES } from "$lib/constant";
 	import CorporationCard from "$lib/components/CorporationCard.svelte";
 	import RecruiterCard from "$lib/components/RecruiterCard.svelte";
 	import Faq from "$lib/components/Faq.svelte";
@@ -32,33 +32,27 @@
 {#snippet heroSection()}
 	<section class="flex justify-center h-screen pt-88px pb-22px">
 		<div class="container mx-auto w-full h-full flex flex-col items-center">
-			<div class="flex flex-col w-full my-auto">
-				<div class="flex flex-col gap-4 lg:mb-66px items-center text-center md:text-left md:items-start md:w-3/4 text-white">
-					<div class="flex flex-col items-center md:items-start gap-2">
-						<div class="flex items-end gap-2">
-							<enhanced:img src="/static/logo512white.png" alt="site logo" class="w-48 h-48 md:w-64 md:h-64"/>
-						</div>
-						<h1 class="font-bold sm:text-2xl lg:text-3xl xl:text-5xl">EVE is complicated, Autumn makes it easy.</h1>
-						<h2 class="sm:text-lg lg:text-xl xl:text-2xl">There are many twists and turns in the beginning of an EVE journey, why waste time learning the hard way when you can learn the right way?</h2>
-						<p>Begin your journey in nullsec with The Order of Autumn, a corporation part of Black Rose alliance &amp; Phoenix Coalition, or in highsec with Autumn Highsec Division.</p>
+			<div class="flex flex-col w-full my-auto gap-4 lg:mb-66px items-center text-center md:text-left md:items-start md:w-3/4 text-white">
+				<div class="flex flex-col items-center md:items-start gap-2">
+					<div class="flex items-end gap-2">
+						<enhanced:img src="/static/logo512white.png" alt="site logo" class="w-48 h-48 md:w-64 md:h-64"/>
 					</div>
-					<ul class="flex gap-2">
-						<li>
-							<a href={DISCORD_LINK} target="_blank" aria-label="Discord">
-								<button class="btn">
-									<Fa icon={faDiscord} size="lg"/>
-									<p>Autumn Discord</p>
-								</button>
-							</a>
-						</li>
-						<li>
-							<a href={APPLY_LINK}>
-								<button class="btn btn-primary">
-									Begin Your Journey
-								</button>
-							</a>
-						</li>
-					</ul>
+					<h1 class="font-bold sm:text-2xl lg:text-3xl xl:text-5xl">EVE is complicated, Autumn makes it easy.</h1>
+					<h2 class="sm:text-lg lg:text-xl xl:text-2xl">There are many twists and turns in the beginning of an EVE journey, why waste time learning the hard way when you can learn the right way?</h2>
+					<p>Begin your journey in nullsec with The Order of Autumn, a corporation part of Black Rose alliance &amp; Phoenix Coalition, or in highsec with Autumn Highsec Division.</p>
+				</div>
+				<div class="flex gap-2">
+					<a href={DISCORD_LINK} target="_blank" aria-label="Discord">
+						<button class="btn">
+							<Fa icon={faDiscord} size="lg" />
+							<p>Autumn Discord</p>
+						</button>
+					</a>
+					<a href={APPLY_LINK}>
+						<button class="btn btn-primary">
+							Begin Your Journey
+						</button>
+					</a>
 				</div>
 			</div>
 			<div
@@ -77,40 +71,30 @@
 
 {#snippet endgameSection()}
 	<section id="endgame" class="flex justify-center bg-base-100">
-		<div class="container mx-auto h-full flex items-center flex-col gap-12 pb-12">
+		<div class="container mx-auto h-full flex items-center flex-col gap-8 pb-12">
 			<div class="flex flex-col">
-				<div class="flex justify-center pt-12">
-					<h1 class="text-center text-gradient font-bold py-4 text-2xl xl:text-4xl">What Does Your Endgame Look Like?</h1>
+				<div class="flex justify-center">
+					<h1 class="text-center text-gradient font-bold py-12 text-2xl xl:text-4xl">What Does Your Endgame Look Like?</h1>
 				</div>
-				<ul class="flex justify-evenly flex-wrap 2xl:w-1440px">
-					<li class="flex flex-col gap-2 items-center text-center w-full md:w-1/2 2xl:w-1/4 px-2 pb-4">
-						<enhanced:img src="/static/images/landing/monitor.png"  class="w-300px h-200px" alt="Monitor"/>
-						<h2 class="border-b-2 pb-1 border-neutral-700 w-fit text-lg font-bold">Fleet Commander</h2>
-						<p>Leader of large scale 100+ player fleets fighting over strategic objectives?</p>
-					</li>
-					<li class="flex flex-col gap-2 items-center text-center w-full md:w-1/2 2xl:w-1/4 px-2 pb-4">
-						<enhanced:img src="/static/images/landing/azbel.png" class="w-300px h-200px" alt="Azbel"/>
-						<h2 class="border-b-2 pb-1 border-neutral-700 w-fit text-lg font-bold">Corporation Leader</h2>
-						<p>CEO of your own large scale organization or small tight-knit group?</p>
-					</li>
-					<li class="flex flex-col gap-2 items-center text-center w-full md:w-1/2 2xl:w-1/4 px-2 pb-4">
-						<enhanced:img src="/static/images/landing/rorqual.png" class="w-300px h-200px" alt="Rorqual"/>
-						<h2 class="border-b-2 pb-1 border-neutral-700 w-fit text-lg font-bold">Industrialist</h2>
-						<p>An industrialist critical to the economy of entire coalitions?</p>
-					</li>
-					<li class="flex flex-col gap-2 items-center text-center w-full md:w-1/2 2xl:w-1/4 px-2 pb-4">
-						<enhanced:img src="/static/images/landing/avatar.png" class="w-300px h-200px" alt="Avatar"/>
-						<h2 class="border-b-2 pb-1 border-neutral-700 w-fit text-lg font-bold">Supercapital Pilot</h2>
-						<p>Pilot of a legendary titan class super capital wielding a doomsday weapon?</p>
-					</li>
+				<ul class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-4 2xl:w-1440px px-4">
+					{#each ENDGAMES as endgame}
+						<li class="flex flex-col gap-2 bg-base-300 rounded-box items-center text-center px-2 py-6">
+							<img src={endgame.imageSrc} class="w-300px h-200px" alt={endgame.imageAlt}/>
+							<h2 class="border-b-2 pb-1 border-neutral-700 w-fit text-lg font-bold">{endgame.title}</h2>
+							<p>{endgame.description}</p>
+						</li>
+					{/each}
 				</ul>
 			</div>
 			<div class="w-full sm:w-3/4">
-				<div class="relative w-full pt-56.25%">
+				<div class="relative w-full aspect-video bg-base-300 rounded-box overflow-hidden">
+					<div class="absolute inset-0 flex items-center justify-center text-gray-400">
+						<p>Video unavailable</p>
+					</div>
 					<iframe class="absolute w-full h-full top-0 left-0" src={FEATURED_VIDEO} title="YouTube video player" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</div>
-			<h3 class="text-xl text-center">No matter what your endgame is, Autumn's goal is to get you there.</h3>
+			<h3 class="text-xl text-center font-bold">No matter what your endgame is, Autumn's goal is to get you there.</h3>
 		</div>
 	</section>
 {/snippet}

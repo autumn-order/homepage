@@ -24,6 +24,13 @@ export interface StatsRequestDto {
     statsHistoryCorporationIds: number[];
 }
 
+export interface EndgameEntry {
+  imageSrc: string;
+  imageAlt: string;
+  title: string;
+  description: string
+}
+
 export interface CorporationCardEntry {
     corporation_id: number;
     corporation_name: string;
