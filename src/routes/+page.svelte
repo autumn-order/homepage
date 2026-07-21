@@ -8,6 +8,10 @@
 	import RecruiterCard from "$lib/components/RecruiterCard.svelte";
 	import Faq from "$lib/components/Faq.svelte";
 	import MemberChart from "$lib/components/MemberChart.svelte";
+
+	function scrollToEndgame() {
+		document.getElementById('endgame')?.scrollIntoView({ behavior: 'smooth' });
+	}
 </script>
 
 <svelte:head>
@@ -56,20 +60,26 @@
 					</ul>
 				</div>
 			</div>
-			<div class="flex flex-col justify-self-end text-white">
-				<p class="text-2xl font-bold">Learn More</p>
-				<Fa icon={faChevronDown} size="lg"/>
-			</div>
+				<div
+					class="flex flex-col justify-self-end text-white mb-4 cursor-pointer"
+					onclick={scrollToEndgame}
+					onkeydown={(e) => e.key === 'Enter' && scrollToEndgame()}
+					role="button"
+					tabindex="0"
+				>
+					<p class="text-2xl font-bold">Learn More</p>
+					<Fa icon={faChevronDown} size="lg"/>
+				</div>
 		</div>
 	</section>
 {/snippet}
 
 {#snippet endgameSection()}
-	<section class="border-base-300 flex justify-center border-t ">
+	<section id="endgame" class="border-base-300 flex justify-center border-t">
 		<div class="container border-base-300 h-full flex items-center flex-col border-x gap-12 pb-12">
 			<div class="flex flex-col">
 				<div class="flex justify-center pt-12">
-					<h1 class="text-center text-gradient font-bold text-2xl xl:text-4xl">What Does Your Endgame Look Like?</h1>
+					<h1 class="text-center text-gradient font-bold py-4 text-2xl xl:text-4xl">What Does Your Endgame Look Like?</h1>
 				</div>
 				<ul class="flex justify-evenly flex-wrap 2xl:w-1440px">
 					<li class="flex flex-col gap-2 items-center text-center w-full md:w-1/2 2xl:w-1/4 px-2 pb-4">
@@ -106,8 +116,8 @@
 
 {#snippet learningCurveSection()}
 	<section class="flex flex-col items-center">
-		<div class="container border-base-300 flex flex-col border text-center py-4">
-			<h1 class="text-gradient font-bold text-xl sm:text-2xl lg:text-3xl text-center">Conquer the EVE Learning Curve</h1>
+		<div class="container border-base-300 flex flex-col border text-center">
+			<h1 class="text-gradient font-bold py-4 text-xl sm:text-2xl lg:text-3xl text-center">Conquer the EVE Learning Curve</h1>
 			<h2 class="text-sm sm:text-base xl:text-lg text-center">EVE's learning curve is steep but worth it, have support &amp; community every step of the way towards realizing your dreams in EVE Online.</h2>
 		</div>
 		<div class="container border-base-300 flex flex-wrap border-x py-12">
@@ -151,8 +161,8 @@
 {#snippet whatSetsApartSection()}
 	<section class="flex justify-center items-center">
 		<div class="container border-base-300 flex flex-col border-x py-12">
-			<div class="flex justify-center pb-6">
-				<h1 class="text-gradient font-bold text-xl sm:text-2xl lg:text-3xl">What Sets Autumn Apart?</h1>
+			<div class="flex justify-center">
+				<h1 class="text-gradient font-bold py-4 text-xl sm:text-2xl lg:text-3xl">What Sets Autumn Apart?</h1>
 			</div>
 			<ul class="flex flex-wrap text-center">
 				<li class="flex flex-col gap-2 items-center w-full lg:w-1/2 p-6">
@@ -172,8 +182,8 @@
 
 {#snippet beginJourneySection()}
 	<section class="flex flex-col items-center">
-		<div class="container border-base-300 flex flex-col border text-center py-4">
-			<h1 class="text-gradient font-bold text-xl sm:text-2xl lg:text-3xl text-center">Begin Your Journey as Early as Right Now</h1>
+		<div class="container border-base-300 flex flex-col border text-center">
+			<h1 class="text-gradient font-bold py-4 text-xl sm:text-2xl lg:text-3xl text-center">Begin Your Journey as Early as Right Now</h1>
 		</div>
 		<div class="container border-base-300 flex border-x pt-12 flex-wrap">
 			<div class="w-full xl:w-1/2 pb-6 flex flex-col items-center">
@@ -244,8 +254,8 @@
 {#snippet faqSection()}
 	<section class="flex flex-col items-center">
 		<div class="container flex flex-col items-center py-6 border-base-300 border-x border-t min-h-700px pb-24">
-			<div class="pb-6">
-				<h1 class="text-gradient font-bold text-xl sm:text-2xl lg:text-3xl text-center">Frequently Asked Questions</h1>
+			<div>
+				<h1 class="text-gradient font-bold py-4 text-xl sm:text-2xl lg:text-3xl text-center">Frequently Asked Questions</h1>
 			</div>
 			<div class="w-full md:max-w-70%">
 				<Faq questions={FAQ_QUESTIONS}/>
