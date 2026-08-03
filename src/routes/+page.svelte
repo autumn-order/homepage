@@ -34,7 +34,7 @@
 			<div class="flex flex-col w-full my-auto gap-4 lg:mb-66px items-center text-center md:text-left md:items-start md:w-3/4 text-white">
 				<div class="flex flex-col items-center md:items-start gap-2">
 					<div class="flex items-end gap-2">
-						<enhanced:img src="/static/logo512white.png" alt="site logo" class="w-48 h-48 md:w-64 md:h-64"/>
+						<img src="/static/logo512white.png" alt="site logo" class="w-48 h-48 md:w-64 md:h-64"/>
 					</div>
 					<h1 class="font-bold sm:text-2xl lg:text-3xl xl:text-5xl">EVE is complicated, Autumn makes it easy.</h1>
 					<h2 class="sm:text-lg lg:text-xl xl:text-2xl">There are many twists and turns in the beginning of an EVE journey, why waste time learning the hard way when you can learn the right way?</h2>

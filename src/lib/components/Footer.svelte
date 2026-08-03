@@ -9,8 +9,8 @@
         <div>
             <a href="/" class="flex items-center gap-4">
                 <div>
-                    <enhanced:img src="/static/logo512black.png" class="w-16 h-16 block dark:hidden" alt="site logo"/>
-                    <enhanced:img src="/static/logo512white.png" class="w-16 h-16 hidden dark:block" alt="site logo"/>
+                    <img src="/static/logo512black.png" class="w-16 h-16 block dark:hidden" alt="site logo"/>
+                    <img src="/static/logo512white.png" class="w-16 h-16 hidden dark:block" alt="site logo"/>
                 </div>
                 <h1 class="text-lg sm:text-2xl lg:text-4xl font-bold">
                     The Order of Autumn
